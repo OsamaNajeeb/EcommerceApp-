@@ -1,6 +1,7 @@
 import {View, Text, Image, StatusBar, StyleSheet} from 'react-native';
 import React from 'react';
 import RoundButtonComp from '../../src/components/RoundButtonComp';
+import FullRoundBtnComp from '../../src/components/FullRoundBtnComp';
 
 export default function SignInScreen() {
   return (
@@ -21,11 +22,48 @@ export default function SignInScreen() {
         <View
           style={{
             flexDirection: 'row',
-            marginTop: 20,
+            marginTop: 10,
             justifyContent: 'center',
-            borderRadius: 30,
           }}>
-          <RoundButtonComp />
+          <RoundButtonComp label={'Login'} isBlue={false} />
+          <RoundButtonComp label={'Sign Up'} isBlue={true} />
+        </View>
+        <View
+          style={{
+            marginTop: 10,
+            justifyContent: 'flex-end',
+            paddingBottom: 20,
+            flex: 1,
+          }}>
+          <Text style={{color: 'white', textAlign: 'center', marginTop: 30}}>
+            Connect through other platform
+          </Text>
+          <View
+            style={{
+              marginTop: 10,
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignContent: 'center',
+            }}>
+            <FullRoundBtnComp
+              image={require('../../assets/gaggle.png')}
+              bg={'white'}
+              widthX={30}
+              heighZ={30}
+            />
+            <FullRoundBtnComp
+              image={require('../../assets/facebook.png')}
+              bg={'#3566A5'}
+              widthX={40}
+              heighZ={40}
+            />
+            <FullRoundBtnComp
+              image={require('../../assets/xitter.png')}
+              bg={'white'}
+              widthX={25}
+              heighZ={25}
+            />
+          </View>
         </View>
       </View>
     </View>
