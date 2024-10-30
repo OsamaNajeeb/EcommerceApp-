@@ -1,12 +1,17 @@
 import {View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-export default function RoundButtonComp({label, isBlue = false}) {
+export default function RoundButtonComp({
+  label,
+  isBlue = false,
+  onPress,
+  widthX = '100%',
+}) {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => onPress()}>
       <View
         style={{
-          width: 100,
+          width: widthX,
           backgroundColor: isBlue ? 'white' : '#034ef7',
           borderRadius: 30,
           padding: 10,

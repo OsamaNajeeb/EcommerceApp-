@@ -3,7 +3,7 @@ import React from 'react';
 import RoundButtonComp from '../../src/components/RoundButtonComp';
 import FullRoundBtnComp from '../../src/components/FullRoundBtnComp';
 
-export default function SignInScreen() {
+export default function SignInScreen({navigation}) {
   return (
     <View style={{flex: 1}}>
       <StatusBar backgroundColor={'#297B6D'} />
@@ -25,8 +25,13 @@ export default function SignInScreen() {
             marginTop: 10,
             justifyContent: 'center',
           }}>
-          <RoundButtonComp label={'Login'} isBlue={false} />
-          <RoundButtonComp label={'Sign Up'} isBlue={true} />
+          <RoundButtonComp label={'Login'} isBlue={false} widthX={100} />
+          <RoundButtonComp
+            label={'Sign Up'}
+            isBlue={true}
+            onPress={() => navigation.navigate('SignUp')}
+            widthX={100}
+          />
         </View>
         <View
           style={{
