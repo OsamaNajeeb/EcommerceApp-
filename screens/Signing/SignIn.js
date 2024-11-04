@@ -2,8 +2,19 @@ import {View, Text, Image, StatusBar, StyleSheet} from 'react-native';
 import React from 'react';
 import RoundButtonComp from '../../src/components/RoundButtonComp';
 import FullRoundBtnComp from '../../src/components/FullRoundBtnComp';
+import {_signInWithGoogle} from '../../src/config/firebase/GoogleSignIn';
 
 export default function SignInScreen({navigation}) {
+  async function googleSignIn() {
+    _signInWithGoogle().then(data => {
+      if (!data) {
+        console.log('Error: ', 'No Data');
+        return;
+      }
+      console.log('Success', data);
+    });
+  }
+
   return (
     <View style={{flex: 1}}>
       <StatusBar backgroundColor={'#297B6D'} />
@@ -55,6 +66,7 @@ export default function SignInScreen({navigation}) {
               bg={'white'}
               widthX={30}
               heighZ={30}
+              onPress={() => googleSignIn()}
             />
             <FullRoundBtnComp
               image={require('../../assets/facebook.png')}

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "613318674448",
+    "project_id": "ecommerceserver-a95bb",
+    "storage_bucket": "ecommerceserver-a95bb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613318674448:android:acabf60fa3ecacc8396295",
+        "android_client_info": {
+          "package_name": "com.enterfaint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613318674448-9pempvvifmp1t1863upv6sj2n4mmebb3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.enterfaint",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "613318674448-7inedvuopb98jcqhbkl2bb2difdaodoc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZHm2-UazsdCCKB3tFHW8ZXyoYPMGDPEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613318674448-7inedvuopb98jcqhbkl2bb2difdaodoc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

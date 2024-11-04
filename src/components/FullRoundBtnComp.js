@@ -1,9 +1,9 @@
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-export default function FullRoundBtnComp({image, bg, widthX, heighZ}) {
+export default function FullRoundBtnComp({image, bg, widthX, heighZ, onPress}) {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => onPress()}>
       <View
         style={{
           backgroundColor: bg,
