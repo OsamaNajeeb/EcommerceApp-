@@ -19,7 +19,7 @@ export default function SignUpScreen({navigation}) {
     auth()
       .createUserWithEmailAndPassword(eMail, password)
       .then(() => {
-        Alert.alert('Login Successful', 'User logged in successfully', [
+        Alert.alert('Account', 'Your account has successfully been created', [
           {
             text: 'OK',
             onPress: () => navigation.replace('Login'),

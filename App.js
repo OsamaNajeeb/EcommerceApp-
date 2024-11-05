@@ -6,12 +6,15 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SignInScreen from './screens/auth/SignIn';
 import SignUpScreen from './screens/auth/SignUp';
 import LoginScreen from './screens/auth/LoginIn';
+import HomeScreen from './screens/HomeScreen';
+import Listener from './screens/auth/Listener';
 
 const stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <>
+      <Listener />
       <NavigationContainer>
         <stack.Navigator>
           <stack.Screen
@@ -32,6 +35,11 @@ const App = () => {
           <stack.Screen
             name={'Login'}
             component={LoginScreen}
+            options={{headerShown: false}}
+          />
+          <stack.Screen
+            name={'Home'}
+            component={HomeScreen}
             options={{headerShown: false}}
           />
         </stack.Navigator>

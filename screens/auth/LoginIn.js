@@ -19,10 +19,10 @@ export default function LoginScreen({navigation}) {
       .signInWithEmailAndPassword(eMail, password)
       .then(() => {
         // Show success alert
-        Alert.alert('Login Successful', 'User logged in successfully', [
+        Alert.alert('Success', ' Login Successfully', [
           {
             text: 'OK',
-            onPress: () => navigation.goBack(),
+            onPress: () => navigation.navigate('Home'),
           },
         ]);
       })
