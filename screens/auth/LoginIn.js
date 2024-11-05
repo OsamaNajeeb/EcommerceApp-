@@ -41,8 +41,8 @@ export default function LoginScreen({navigation}) {
   return (
     <View style={{flex: 1, backgroundColor: '#297B6D', padding: 15}}>
       <StatusBar backgroundColor={'#297B6D'} />
-      <Text style={[stylesOne.head, stylesOne.align]}>Login</Text>
       <View style={{flex: 1, justifyContent: 'center'}}>
+        <Text style={[stylesOne.head, stylesOne.align]}>Login</Text>
         <View style={textFieldStyle.textF}>
           <TextInput
             placeholder="Enter Email"
@@ -88,7 +88,7 @@ const stylesOne = StyleSheet.create({
   head: {
     fontSize: 30,
     fontWeight: 'bold',
-    marginTop: 30,
+    marginVertical: 30,
   },
   align: {
     textAlign: 'center',

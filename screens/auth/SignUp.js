@@ -19,7 +19,12 @@ export default function SignUpScreen({navigation}) {
     auth()
       .createUserWithEmailAndPassword(eMail, password)
       .then(() => {
-        Alert.alert('User account created successfully');
+        Alert.alert('Login Successful', 'User logged in successfully', [
+          {
+            text: 'OK',
+            onPress: () => navigation.replace('Login'),
+          },
+        ]);
       })
       .catch(error => {
         if (error.code === 'auth/email-already-in-use') {
@@ -35,10 +40,10 @@ export default function SignUpScreen({navigation}) {
   };
 
   return (
-    <View style={{flex: 1, backgroundColor: '#297B6D', padding: 15}}>
-      <StatusBar backgroundColor={'#297B6D'} />
-      <Text style={[stylesOne.head, stylesOne.align]}>Sign Up</Text>
+    <View style={{flex: 1, backgroundColor: '#d68492', padding: 15}}>
+      <StatusBar backgroundColor={'#d68492'} />
       <View style={{flex: 1, justifyContent: 'center'}}>
+        <Text style={[stylesOne.head, stylesOne.align]}>Sign Up</Text>
         <View style={textFieldStyle.textF}>
           <TextInput
             placeholder="Enter Email"
@@ -84,7 +89,7 @@ const stylesOne = StyleSheet.create({
   head: {
     fontSize: 30,
     fontWeight: 'bold',
-    marginTop: 30,
+    marginVertical: 30,
   },
   align: {
     textAlign: 'center',
