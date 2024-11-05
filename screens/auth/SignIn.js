@@ -36,7 +36,12 @@ export default function SignInScreen({navigation}) {
             marginTop: 10,
             justifyContent: 'center',
           }}>
-          <RoundButtonComp label={'Login'} isBlue={false} widthX={100} />
+          <RoundButtonComp
+            label={'Login'}
+            isBlue={false}
+            onPress={() => navigation.navigate('Login')}
+            widthX={100}
+          />
           <RoundButtonComp
             label={'Sign Up'}
             isBlue={true}
