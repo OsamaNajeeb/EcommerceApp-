@@ -18,6 +18,11 @@ const App = () => {
       <NavigationContainer>
         <stack.Navigator>
           <stack.Screen
+            name={'Home'}
+            component={HomeScreen}
+            options={{headerShown: false}}
+          />
+          <stack.Screen
             name={'Splash'}
             component={SplashScreen}
             options={{headerShown: false}}
@@ -35,11 +40,6 @@ const App = () => {
           <stack.Screen
             name={'Login'}
             component={LoginScreen}
-            options={{headerShown: false}}
-          />
-          <stack.Screen
-            name={'Home'}
-            component={HomeScreen}
             options={{headerShown: false}}
           />
         </stack.Navigator>
